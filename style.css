@@ -1,0 +1,167 @@
+::after,
+::before,
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  color-scheme: light dark;
+}
+body {
+  background-color: hsl(216, 12%, 8%);
+  height: 100vh;
+  display: grid;
+  place-content: center;
+  font-family: "Overpass", sans-serif;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  display: block;
+}
+main {
+  max-height: 500px;
+  width: 90vw;
+  height: 60vh;
+  max-width: 600px;
+  background-image: radial-gradient(at top, hsl(213, 19%, 18%), #171e26);
+
+  padding: 1em;
+  border-radius: 2em;
+}
+main > section {
+  width: 100%;
+  height: 100%;
+  padding: 0.5em 0;
+}
+.main_content {
+  display: grid;
+  padding: 2em;
+}
+
+.main_content > header > img {
+  background-color: hsl(213, 19%, 18%);
+  border-radius: 50%;
+  padding: 1em;
+  min-width: 3.8em;
+}
+h1 {
+  font-size: clamp(2em, 2.5vw, 3em);
+}
+.main_content > header {
+  display: grid;
+  row-gap: 1em;
+}
+.main_content > header > p {
+  max-width: 80%;
+  font-size: 18px;
+  color: hsl(217, 12%, 63%);
+}
+.main_content > article {
+  display: grid;
+}
+.main_content > article > div {
+  padding: 2em 0;
+  display: flex;
+  justify-content: space-between;
+}
+/* buttons */
+.number:hover {
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(217, 12%, 63%);
+}
+.number {
+  transition: background-color, color, 200ms;
+  background-color: hsl(213, 19%, 18%);
+  border-radius: 50%;
+  aspect-ratio: 1/1;
+  width: 3em;
+  font-weight: bold;
+  font-size: 1.3em;
+  color: hsl(217, 12%, 63%);
+}
+button[type="submit"] {
+  transition: background-color, color, 600ms;
+  background-color: hsl(25, 97%, 53%);
+  width: 100%;
+  font-size: 1.2em;
+  padding: 1em;
+  letter-spacing: 0.1em;
+  border-radius: 2em;
+}
+button[type="submit"]:hover {
+  background-color: hsl(0, 0%, 100%);
+  color: hsl(25, 97%, 53%);
+}
+
+.disabled {
+  display: none;
+}
+
+.orange {
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(25, 97%, 53%);
+}
+/* section two */
+.sub_content {
+  display: grid;
+}
+.sub_content > header {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  row-gap: 2em;
+}
+.sub_content > header > img {
+  width: 15em;
+}
+.sub_content > header > p {
+  color: hsl(25, 97%, 53%);
+  opacity: 0.6;
+  padding: 0.8em 1.4em;
+  font-size: 1.2em;
+  border-radius: 1.6em;
+  background-color: hsl(213, 19%, 18%);
+}
+.sub_content > article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5em;
+}
+.sub_content > article > p {
+  color: hsl(216, 12%, 54%);
+  max-width: 64%;
+  text-align: center;
+}
+h2 {
+  font-size: clamp(1.6em, 2.2vw, 3em);
+}
+p {
+  font-size: 18px;
+}
+
+@media (width < 450px) {
+  .main_content {
+    padding: 0.2em;
+  }
+  .main_content > article > div {
+    padding: 0.8em 0;
+  }
+  .main_content > article > div > button {
+    width: 2em;
+  }
+  .main_content > article > button {
+    padding: 0.2em 0.6em;
+  }
+  .sub_content > header > p {
+    padding: 0.5em;
+  }
+  .sub_content > article {
+    row-gap: 0.5em;
+    padding: 0.4em;
+  }
+}
